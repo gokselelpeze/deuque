@@ -6,9 +6,7 @@
 
         <form></
         <?php
-            foreach($answers as $a){
-                echo $a->answer."<hr>";
-            }
+            print_r($answers);
         ?>
     </body>
 </html>
