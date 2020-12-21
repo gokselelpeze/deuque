@@ -3,10 +3,13 @@
         <title>Answers</title>
     </head>
     <body>
+<textarea name="message" rows="10" cols="30">
+<?php
+foreach($answers as $a){
+    echo $a->answer."\n";
+}
+?>
+</textarea>
 
-        <form></
-        <?php
-            print_r($answers);
-        ?>
     </body>
 </html>

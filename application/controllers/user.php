@@ -4,7 +4,7 @@
 
         public function index(){
 
-            echo "all data";
+            $this->load->view("index.php");
 
         }
 
@@ -15,7 +15,6 @@
             $this->load->view("answers.php",$data);
         }
 
-        
 
     }
 
