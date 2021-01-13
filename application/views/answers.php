@@ -1,15 +1,10 @@
 <html>
     <head>
-        <title>Answers</title>
+        <title>Index</title>
     </head>
     <body>
-<textarea name="message" rows="10" cols="30">
-<?php
-foreach($answers as $a){
-    echo $a->answer."\n";
-}
-?>
-</textarea>
-
+        <?php
+            print_r($answers);
+        ?>
     </body>
 </html>
