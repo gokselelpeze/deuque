@@ -15,6 +15,12 @@
             $this->load->view("answers.php",$data);
         }
 
+        public function login(){
+            $this->load->model("answers_model");
+
+            $this->load->view("login.php");
+        }
+
 
     }
 
