@@ -10,7 +10,7 @@
         <textarea name="message" rows="10" cols="30">
 The cat was playing in the garden.
 </textarea>
-        <a href="answers">Answers </a>
+        <a href="profile">Profile page </a>
     </body>
 </html>
 

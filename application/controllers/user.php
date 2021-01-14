@@ -16,16 +16,16 @@
         }
 
         public function login(){
-            $this->load->model("answers_model");
-
             $this->load->view("login.php");
         }
 
         public function signup(){
-            $this->load->model("answers_model");
-
             $this->load->view("signup.php");
         }
+        public function profile(){
+            $this->load->view("profile.php");
+        }
+
 
 
     }
