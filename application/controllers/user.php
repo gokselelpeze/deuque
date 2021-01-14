@@ -21,6 +21,12 @@
             $this->load->view("login.php");
         }
 
+        public function signup(){
+            $this->load->model("answers_model");
+
+            $this->load->view("signup.php");
+        }
+
 
     }
 
