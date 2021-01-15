@@ -1,64 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="About us sayfası">
-      <change afterPath="$PROJECT_DIR$/application/controllers/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/login_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/data.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/invalid.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/login_view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/show.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/signin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/hooks.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/hooks.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/mimes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/mimes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/profiler.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/profiler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/smileys.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/smileys.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/user_agents.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/user_agents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/answers_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/answers_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/core/Common.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/core/Common.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/core/Input.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/core/Input.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/core/URI.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/core/URI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/DB_query_builder.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/DB_query_builder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/DB_utility.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/DB_utility.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/drivers/cubrid/cubrid_driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/drivers/pdo/subdrivers/pdo_pgsql_driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/database/drivers/postgre/postgre_driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Cache/Cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Cache/Cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_apc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_dummy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Cache/drivers/Cache_file.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Calendar.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Calendar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Driver.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Driver.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Email.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Email.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Encrypt.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Encrypt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Form_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Form_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Image_lib.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Image_lib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Javascript.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Javascript.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Javascript/Jquery.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Javascript/Jquery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Typography.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Typography.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/User_agent.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/User_agent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Xmlrpc.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpc.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/libraries/Xmlrpcs.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/libraries/Xmlrpcs.php" afterDir="false" />
-    </list>
-    <list id="abb91d32-c692-47fe-8846-414fe686f84f" name="Changes by gokhanelpeze" comment="">
-      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/signup.php" afterDir="false" />
-    </list>
+    <list default="true" id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="About us sayfası" />
+    <list id="abb91d32-c692-47fe-8846-414fe686f84f" name="Changes by gokhanelpeze" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +123,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="anasayfa_tasarim" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
