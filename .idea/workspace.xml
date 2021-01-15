@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="91445c7e-bbfa-4d2e-93ef-627ed7e7b9c2" name="Default Changelist" comment="profile page">
+    <list default="true" id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="footer, header ayrıldı">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/profile.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/welcome_message.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,89 +18,75 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1lzAMFB21NBsNUQiABPXWZmWQip" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
+  <component name="ProjectId" id="1n1fv2JvGHSEDJZyxGQTbrnsGFy" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/application/views" />
+      <recent name="C:\xampp\htdocs\deuque\application\views" />
+      <recent name="C:\xampp\htdocs\deuque\assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="91445c7e-bbfa-4d2e-93ef-627ed7e7b9c2" name="Default Changelist" comment="" />
-      <created>1608589496092</created>
+      <changelist id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="" />
+      <created>1610562749852</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1608589496092</updated>
-      <workItem from="1608589497380" duration="2616000" />
-      <workItem from="1610559239469" duration="4521000" />
-      <workItem from="1610565062097" duration="2013000" />
-      <workItem from="1610619542824" duration="3659000" />
-      <workItem from="1610657432311" duration="1668000" />
-      <workItem from="1610706787825" duration="3112000" />
+      <updated>1610562749852</updated>
+      <workItem from="1610562754619" duration="5409000" />
+      <workItem from="1610706799462" duration="6812000" />
     </task>
-    <task id="LOCAL-00001" summary="textfield icine tofas">
-      <created>1608591675249</created>
+    <task id="LOCAL-00001" summary="a">
+      <created>1610563343217</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1608591675249</updated>
+      <updated>1610563343217</updated>
     </task>
-    <task id="LOCAL-00002" summary="login.php">
-      <created>1610564289859</created>
+    <task id="LOCAL-00002" summary="footer, header ayrıldı">
+      <created>1610712669732</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1610564289859</updated>
+      <updated>1610712669732</updated>
     </task>
-    <task id="LOCAL-00003" summary="login.php">
-      <created>1610572823921</created>
+    <task id="LOCAL-00003" summary="footer, header ayrıldı">
+      <created>1610713095200</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1610572823921</updated>
+      <updated>1610713095200</updated>
     </task>
-    <task id="LOCAL-00004" summary="login ve signup">
-      <created>1610640321380</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1610640321380</updated>
-    </task>
-    <task id="LOCAL-00005" summary="profile page">
-      <created>1610658553259</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1610658553259</updated>
-    </task>
-    <task id="LOCAL-00006" summary="profile page">
-      <created>1610707651399</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1610707651400</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,11 +105,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="textfield icine tofas" />
-    <MESSAGE value="login.php" />
-    <MESSAGE value="login ve signup" />
-    <MESSAGE value="profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="profile page" />
+    <MESSAGE value="a" />
+    <MESSAGE value="footer, header ayrıldı" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer, header ayrıldı" />
   </component>
 </project>

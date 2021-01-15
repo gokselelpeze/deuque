@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>PROFILE</title>
-    </head>
-    <body>
-        <a href="user">Homepage </a>
-    </body>
-</html>
+<?php include 'header.php'?>
+    <div class="container">
+        <p>bla</p>
+    </div>
+<?php include 'footer.php'?>
 
