@@ -1,6 +1,6 @@
 <?php
 
-    class user extends CI_Controller{
+    class main extends CI_Controller{
 
         public function index(){
 
@@ -27,6 +27,9 @@
         }
         public function aboutUs(){
             $this->load->view("about-us.php");
+        }
+        public function show(){
+            $this->load->view("show.php");
         }
 
 

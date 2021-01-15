@@ -1,7 +1,7 @@
 
 <?php include 'header.php';?>
         <div class="jumbotron text-center">
-            <h1>Create and Share Your Questions</h1>
+            <h1>Create and Share Your Questions<?php echo $a?></h1>
             <p>The easy way to create questionnaire,create analyze, take questionnaires</p>
         </div>
         <div class="container">

@@ -170,7 +170,7 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 	// --------------------------------------------------------------------
 
 	/**
-	 * Main Server Function
+	 * login Server Function
 	 *
 	 * @return	void
 	 */

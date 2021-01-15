@@ -8,4 +8,10 @@ class answers_model extends CI_Model{
         return $query->result();
     }
 
+    public function getQuestionnaireById()
+    {
+        $query = $this->db->query("SELECT * FROM questionnaires");
+        return $query->result();
+    }
+
 }
