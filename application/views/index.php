@@ -1,3 +1,4 @@
+
 <?php include 'header.php';?>
         <div class="jumbotron text-center">
             <h1>Create and Share Your Questions</h1>
@@ -24,3 +25,4 @@
             </div>
         </div>
 <?php include 'footer.php';?>
+

@@ -4,7 +4,7 @@
     </head>
     <body>
         <?php
-            print_r($answers);
+        print_r($answers);
         ?>
     </body>
 </html>
