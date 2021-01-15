@@ -54,6 +54,7 @@ $route['answers'] = 'user/data/';
 $route['login'] = 'user/login/';
 $route['signup'] = 'user/signup/';
 $route['profile'] = 'user/profile/';
+$route['about-us'] = 'user/aboutUs/';
 
 
 $route['404_override'] = '';

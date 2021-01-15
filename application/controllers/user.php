@@ -25,6 +25,9 @@
         public function profile(){
             $this->load->view("profile.php");
         }
+        public function aboutUs(){
+            $this->load->view("about-us.php");
+        }
 
 
 
