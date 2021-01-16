@@ -10,7 +10,8 @@ class login extends CI_Controller {
 
     public function loginPage()
     {
-        $this->load->view('login-page');
+        $logInfo['info'] = "";
+        $this->load->view('login-page',$logInfo);
     }
 
     public function signin()
@@ -35,6 +36,7 @@ class login extends CI_Controller {
 
     public function login_action()
     {
+        $logInfo['info'] = "";
         $this->load->helper('security');
         $this->load->library('form_validation');
         $this->load->model('login_model');
@@ -44,6 +46,7 @@ class login extends CI_Controller {
 
         if ($this->form_validation->run())
         {
+            $logInfo['info'] = "";
             $userInfo = $this->login_model->getUserInfo($this->input->post('username'),$this->input->post('password'));
             $this->load->view('test', ['userInfo' => $userInfo]);
             $userInfo['currently_logged_in'] = 1;
@@ -56,8 +59,8 @@ class login extends CI_Controller {
            redirect('login/data');
         }
         else {
-            $invalid = "Login failed, wrong password or username!";
-            $this->load->view('login-page', $invalid);
+            $logInfo['info'] = "Login failed, wrong password or username!";
+            $this->load->view('login-page', $logInfo);
         }
     }
 

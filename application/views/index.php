@@ -1,11 +1,12 @@
 
-<?php include 'header.php';?>
+<?php
+if ($this->session->userdata('currently_logged_in'))
+    include 'header-user.php';
+else
+    include 'header.php';
+?>
         <div class="jumbotron text-center">
             <h1>Create and Share Your Questions</h1>
-            <?php
-            if($this->session->userdata['currently_logged_in'])
-                echo $this->session->userdata['username'];
-            ?>
             <p>The easy way to create questionnaire,create analyze, take questionnaires</p>
         </div>
         <div class="container">

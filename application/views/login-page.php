@@ -5,7 +5,9 @@
                 <div class="row">
                     <div class="col-md-5 mx-auto">
                         <div class="card card-body">
-
+                            <p class="small-xl pt-3 text-center">
+                                <span class="text-danger"><?php echo $info?></span>
+                            </p>
                             <form id="submitForm" action="<?php echo base_url()?>login/login_action" method="post" data-parsley-validate="" data-parsley-errors-messages-disabled="true" novalidate="" _lpchecked="1"><input type="hidden" name="_csrf" value="7635eb83-1f95-4b32-8788-abec2724a9a4">
                                 <div class="form-group required">
                                     <lSabel for="username">Username / Email</lSabel>
