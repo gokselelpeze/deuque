@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="About us sayfası">
-      <change beforePath="$PROJECT_DIR$/.idea/deuque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deuque.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="7a4c4ca6-1a04-4254-b4b3-e6246fd7d6a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
-    </list>
-    <list id="abb91d32-c692-47fe-8846-414fe686f84f" name="Changes by gokhanelpeze" comment="">
       <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/contact.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5d725d8c-c273-48a7-a957-762bec523f0a" name="Default Changelist" comment="" />
+      <changelist id="7a4c4ca6-1a04-4254-b4b3-e6246fd7d6a2" name="Default Changelist" comment="" />
       <created>1610562749852</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -95,6 +90,7 @@
       <workItem from="1610737201208" duration="1989000" />
       <workItem from="1610748549061" duration="53000" />
       <workItem from="1610748624781" duration="1453000" />
+      <workItem from="1610800889202" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1610563343217</created>
@@ -145,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610749670562</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Revert &quot;Delete .idea directory&quot;&#10;&#10;This reverts commit ddca9382">
+      <created>1610800769925</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610800769925</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +184,8 @@
     <MESSAGE value="footer, header ayrıldı, linkler düzeltildi" />
     <MESSAGE value="foto" />
     <MESSAGE value="About us sayfası" />
-    <option name="LAST_COMMIT_MESSAGE" value="About us sayfası" />
+    <MESSAGE value="Revert &quot;Delete .idea directory&quot;&#10;&#10;This reverts commit ddca9382" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Delete .idea directory&quot;&#10;&#10;This reverts commit ddca9382" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

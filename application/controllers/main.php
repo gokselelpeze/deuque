@@ -31,6 +31,9 @@
         public function show(){
             $this->load->view("show.php");
         }
+        public function contact(){
+            $this->load->view("contact.php");
+        }
 
 
 
