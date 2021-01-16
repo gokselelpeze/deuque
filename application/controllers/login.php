@@ -10,7 +10,7 @@ class login extends CI_Controller {
 
     public function loginPage()
     {
-        $this->load->view('login2');
+        $this->load->view('login-page');
     }
 
     public function signin()
@@ -56,7 +56,8 @@ class login extends CI_Controller {
            redirect('login/data');
         }
         else {
-            $this->load->view('login2');
+            $invalid = "Login failed, wrong password or username!";
+            $this->load->view('login-page', $invalid);
         }
     }
 

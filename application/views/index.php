@@ -4,7 +4,7 @@
             <h1>Create and Share Your Questions</h1>
             <?php
             if($this->session->userdata['currently_logged_in'])
-                echo $this->session->userdata['userdata']
+                echo $this->session->userdata['username'];
             ?>
             <p>The easy way to create questionnaire,create analyze, take questionnaires</p>
         </div>

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url();?>assets/style/style.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -19,10 +20,10 @@
                         <a class="nav-link" href="#">Questionnaires</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about-us">About Us</a>
+                        <a class="nav-link" href="<?php echo base_url();?>about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact</a>
+                        <a class="nav-link" href="<?php echo base_url();?>contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -35,13 +36,13 @@
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="profile">Profile</a>
+                        <a class="nav-link" href="<?php echo base_url();?>profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="login">Login</a>
+                        <a class="nav-link" href="<?php echo base_url();?>login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="signup">Sign up</a>
+                        <a class="nav-link" href="<?php echo base_url();?>signup">Sign up</a>
                     </li>
                 </ul>
             </div>
