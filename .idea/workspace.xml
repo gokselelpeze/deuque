@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+
     <list default="true" id="7a4c4ca6-1a04-4254-b4b3-e6246fd7d6a2" name="Default Changelist" comment="düzeltme">
       <change afterPath="$PROJECT_DIR$/application/views/header-user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -8,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/login-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login-page.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +94,10 @@
       <workItem from="1610737201208" duration="1989000" />
       <workItem from="1610748549061" duration="53000" />
       <workItem from="1610748624781" duration="1453000" />
+
       <workItem from="1610800889202" duration="8265000" />
+
+
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1610563343217</created>

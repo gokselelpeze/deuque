@@ -56,6 +56,7 @@ $route['login-page'] = 'main/login/';
 $route['signup'] = 'main/signup/';
 $route['profile'] = 'main/profile/';
 $route['about-us'] = 'main/aboutUs/';
+$route['questionnaires'] = 'main/questionnaires/';
 $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['questionnaire/(:any)'] = 'main/questionnaire/$1';
