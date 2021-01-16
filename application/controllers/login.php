@@ -23,7 +23,7 @@ class login extends CI_Controller {
     {
         if ($this->session->userdata('currently_logged_in'))
         {
-            $this->load->view('pages/index');
+            $this->load->view('pages/index', $this->session->userdata('currently_logged_in'));
         } else {
             redirect('login/invalid');
         }
@@ -48,7 +48,6 @@ class login extends CI_Controller {
         {
             $logInfo['info'] = "";
             $userInfo = $this->login_model->getUserInfo($this->input->post('username'),$this->input->post('password'));
-            $this->load->view('test', ['userInfo' => $userInfo]);
             $userInfo['currently_logged_in'] = 1;
             $data = array(
                 'username' => $this->input->post('username'),
