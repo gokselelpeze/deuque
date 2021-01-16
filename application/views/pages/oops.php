@@ -13,9 +13,9 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+        <div class="container mt-5">
+            <div class="row ">
+                <div class="col-md-12 mt-5">
                     <div class="error-template">
                         <h1>
                             Oops!</h1>
