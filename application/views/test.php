@@ -1,1 +1,1 @@
-<?php var_dump($test); ?>
+<?php echo $this->session->userdata['username']; ?>

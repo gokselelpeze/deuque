@@ -22,8 +22,7 @@ class login extends CI_Controller {
     {
         if ($this->session->userdata('currently_logged_in'))
         {
-            $a = $this->session->userdata('user_id');
-            $this->load->view('index', $a);
+            $this->load->view('index');
         } else {
             redirect('login/invalid');
         }
