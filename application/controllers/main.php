@@ -34,6 +34,9 @@
         public function contact(){
             $this->load->view("contact.php");
         }
+        public function questionnaires(){
+            $this->load->view("questionnaires.php");
+        }
 
 
 
