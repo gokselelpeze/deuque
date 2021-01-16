@@ -63,6 +63,7 @@ $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
 $route['questionnaire/(:any)'] = 'main/questionnaire/$1';
+$route['oops'] = 'main/oops/';
 
 
 

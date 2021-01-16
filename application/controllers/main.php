@@ -47,6 +47,9 @@
         public function questionnaire(){
             $this->load->view("pages/questionnaire.php");
         }
+        public function oops(){
+            $this->load->view("pages/oops.php");
+        }
 
 
 
