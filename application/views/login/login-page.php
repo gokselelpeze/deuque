@@ -1,4 +1,9 @@
-<?php include 'header.php';?>
+<?php
+if ($this->session->userdata('currently_logged_in'))
+    include dirname(__DIR__, 1) . '/sections/header-user.php';
+else
+    include dirname(__DIR__, 1) . '/sections/header.php';
+?>
             <div class="container">
                 <div class="pt-5 mt-5">
                     <h1 class="text-center">Login</h1>
@@ -37,4 +42,4 @@
                 </div>
             </div>
         </div>
-<?php include 'footer.php';?>
+<?php include dirname(__DIR__, 1) . '/sections/footer.php';?>

@@ -1,4 +1,9 @@
-<?php include 'header.php' ?>
+<?php
+if ($this->session->userdata('currently_logged_in'))
+    include dirname(__DIR__, 1) . '/sections/header-user.php';
+else
+    include dirname(__DIR__, 1) . '/sections/header.php';
+?>
 <div class="container">
     <div><p><label for="x"></label></p></div>
     <div><p><label for="x"></label></p></div>
@@ -8,7 +13,7 @@
             <div class="card">
                 <div class="d-flex justify-content-center">
                     <img alt="" class="avatar width-full rounded-2 rounded-0"
-                         src="assets/img/ibrahim.jpg">
+                         src="<?php base_url() ?>assets/img/ibrahim.jpg">
                 </div>
                 <div>
                     <dd style="color: #AA0000;">Gökhan Göksel Elpeze
@@ -38,4 +43,4 @@
         </div>
     </div>
 </div>
-<?php include 'footer.php' ?>
+<?php include dirname(__DIR__, 1) . '/sections/footer.php';?>

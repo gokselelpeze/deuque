@@ -1,4 +1,9 @@
-<?php include 'header.php'; ?>
+<?php
+if ($this->session->userdata('currently_logged_in'))
+    include dirname(__DIR__, 1) . '/sections/header-user.php';
+else
+    include dirname(__DIR__, 1) . '/sections/header.php';
+?>
 <div class="jumbotron text-center">
     <h3>Create a new Questionnaire</h3>
     HTML CSSResult Skip Results Iframe
@@ -40,5 +45,5 @@
     </div>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/sections/footer.php';?>
 
