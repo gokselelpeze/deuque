@@ -5,8 +5,10 @@ class questionnaires extends CI_Controller{
 
     public function questionnaireTest(){
         $this->load->model("questionnaires_model");
-        $this->questionnaires_model->testModel($this->session->userdata('user_id'));
-        $this->load->view("pages/test.php");
+        $data['usersQns'] = $this->questionnaires_model->getUsersQns($this->session->userdata('user_id'));
+        $data['user'] = $this->questionnaires_model->getUserById($this->session->userdata('user_id'));
+        $this->load->view("pages/test.php",$data);
+
 
     }
 

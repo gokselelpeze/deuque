@@ -22,8 +22,15 @@
         public function signup(){
             $this->load->view("pages/signup.php");
         }
-        public function profile(){
-            $this->load->view("pages/profile.php");
+        public function profile($param = ''){
+            $this->load->model("questionnaires_model");
+            $data['usersQns'] = $this->questionnaires_model->getUsersQns($param);
+            $data['user'] = $this->questionnaires_model->getUserById($param);
+            $data['count'] = $this->questionnaires_model->getQnsCount($param);
+            if($data['user'] != null)
+                $this->load->view("pages/profile.php",$data);
+            else
+                $this->load->view("pages/oops.php");
         }
         public function aboutUs(){
             $this->load->view("pages/about-us.php");
