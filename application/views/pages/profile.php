@@ -16,7 +16,7 @@ else
                          src="<?php base_url() ?>assets/img/ibrahim.jpg">
                 </div>
                 <div>
-                    <dd style="color: #AA0000;">Gökhan Göksel Elpeze
+                    <dd style="color: #AA0000;"><?php echo $this->session->userdata('username')?>
                     <dd class="profile-rank">Member
                     <dd class="questionnaire-count"><strong>Questionnaires:</strong> 4
                     <dd class="profile-joined"><strong>Joined:</strong> Wed Jul 19, 2017 1:36 am
@@ -26,20 +26,18 @@ else
         <div class="col-8">
             <label for=""></label> <strong>QUESTIONNAIRES</strong>
             <ul class=" list-group p-2">
-                <a href="">
-                    <li class="d-flex justify-content-between list-group-item">Anket 1 : Halil
-                </a>
+                <li class="d-flex justify-content-between list-group-item"><a href="#">Anket 1 : Halil</a>
                 <div>
                     <button class="btn-secondary" disabled>Edit <i class="fa fa-pencil"></i></button>
                     <button class="btn-primary">Publish <i class="fa fa-toggle-on"></i></button>
                     <button class="btn-primary">Share <i class="fa fa-share-alt"></i></button>
                 </div>
                 </li>
-                <div class="form-group has-search">
-                    <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
             </ul>
+            <div class="form-group has-search">
+                <span class="fa fa-search form-control-feedback"></span>
+                <input type="text" class="form-control" placeholder="Search">
+            </div>
         </div>
     </div>
 </div>
