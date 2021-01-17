@@ -13,7 +13,6 @@ class signup_model extends CI_Model
             'user_mail' => $this->input->post('email')
         );
 
-        // users is the name of the db table you are inserting in
         return $this->db->insert('users', $data);
     }
 }

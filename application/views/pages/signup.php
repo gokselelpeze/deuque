@@ -10,7 +10,6 @@ else
         <div class="row">
             <div class="col-md-5 mx-auto">
                 <div class="card card-body">
-
                     <form id="submitForm" method="post" class="needs-validation" oninput='passconf.setCustomValidity(passconf.value != password.value ? "Passwords do not match." : "")' novalidate>
                         <input type="hidden" name="_csrf" value="7635eb83-1f95-4b32-8788-abec2724a9a4">
                         <div class="d-flex">
