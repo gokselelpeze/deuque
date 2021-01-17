@@ -67,6 +67,7 @@ $route['olusanAnket'] = 'main/olusanAnket';
 $route['validation'] = 'signup/validation';
 $route['questionnaire/(:any)'] = 'main/questionnaire/$1';
 $route['fill/(:any)'] = 'questionnaires/fill/$1';
+$route['responses/(:any)'] = 'questionnaires/responses/$1';
 
 
 

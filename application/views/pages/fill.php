@@ -8,12 +8,19 @@ $questionsInfo = json_decode(json_encode($questions), true);
 $userInfo = json_decode(json_encode($user), true);
 ?>
 <page size="A4">
-
-<div class="container mt-5 py-5">
+    <nav class="d-flex justify-content-lg-center">
+        <div>
+            <a class="mr-5" href="<?php echo base_url();?>fill/<?php echo $qnInfo[0]['questionnaire_id'] ?>">Questions</a>
+        </div>
+        <div>
+            <a href="<?php echo base_url();?>responses/<?php echo $qnInfo[0]['questionnaire_id']?>">Responses</a>
+        </div>
+    </nav>
+<div class="container py-5">
     <h1 class="text-center"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
     <h2 class="text-secondary text-center"><?php echo $qnInfo[0]['questionnaire_subtext'] ?></h2>
 
-    <div class="ml-5 mt-3">
+    <div class="ml-5 ">
         <form>
             <?php foreach ($questionsInfo as $question) {
                 echo '<div class="question mb-5">';
