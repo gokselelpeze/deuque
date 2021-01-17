@@ -1,11 +1,10 @@
-
 <?php
 if ($this->session->userdata('currently_logged_in'))
     include dirname(__DIR__, 1) . '/sections/header-user.php';
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
 ?>
-<div class="bg-warning">
+    <div class="bg-warning">
         <div class="container text-center">
             <br>
             <br>
@@ -17,8 +16,6 @@ else
             <?php include dirname(__DIR__, 1) . '/sections/customer-reviews.php'; ?>
 
         </div>
-</div>
+    </div>
 
 <?php include dirname(__DIR__, 1) . '/sections/footer.php'; ?>
-
-

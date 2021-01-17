@@ -55,6 +55,7 @@ else
                             <button class="btn btn-primary btn-block" type="submit" value="Submit">Sign up</button>
                         </div>
                     </form>
+                    <a class="text-center" href="<?php echo base_url();?>login">Already have an account?</a>
                 </div>
             </div>
         </div>
