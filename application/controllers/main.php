@@ -50,6 +50,12 @@
         public function oops(){
             $this->load->view("pages/oops.php");
         }
+        public function qn(){
+            $this->load->view("pages/qn.php");
+        }
+        public function olusanAnket(){
+            $this->load->view("pages/olusanAnket.php");
+        }
 
 
 
