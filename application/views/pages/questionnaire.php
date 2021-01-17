@@ -19,25 +19,23 @@ else
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Description" id="description">
-            </div class="form-group">
-                <select id="qnType" name="qnType" class="custom-select mb-3">
-                    <option selected value="Multiple Choice">Multiple Choice</option>
-                    <option value="Paragraph">Paragraph</option>
-                </select>
-            </form>
+
         </div>
-
-
-
     </div>
+</div>
 
-    <div class="d-flex flex-column" id="questions">
+<div class="d-flex flex-column" id="questions">
 
-    </div>
-    <div class="col mt-4 justify-content-between">
-        <button type="button" class="btn btn-primary col-4" id="addQuestion">Add Question</button>
-        <button type="button" class="btn btn-primary col-4" id="saveQuestion">Save</button>
-    </div>
+</div>
+<div class="col mt-4 justify-content-between">
+    <label for="Type">Question Type</label>
+    <select id="qnType" name="qnType" class="custom-select mb-3">
+        <option selected value="Multiple Choice">Multiple Choice</option>
+        <option value="Paragraph">Paragraph</option>
+    </select>
+    <button type="button" class="btn btn-primary col-4" id="addQuestion">Add Question</button>
+    <button type="button" class="btn btn-primary col-4" id="saveQn">Save</button>
+</div>
 </div
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -45,13 +43,14 @@ else
     $(document).ready(function () {
         var $addQuestion = $('#addQuestion');
         var $questions = $('#questions');
-        var $savePool = $('#savePool');
+        var $saveQn = $('#saveQn');
 
         window.id = 1;
 
-        $savePool.click(function () {
+
+        $saveQn.click(function () {
             var data = {};
-            var questions = $('#polls .card .card-header').get().map(function (val) {
+            var questions = $('#questions .card .card-header').get().map(function (val) {
                 data[$(val).closest('.card').attr('id')] = val;
             })
 
@@ -64,22 +63,23 @@ else
             console.log(qnType);
             questionItem(qnType, window.id);
         })
+
         function getSelectedOption(sel) {
             var opt;
-            for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+            for (var i = 0, len = sel.options.length; i < len; i++) {
                 opt = sel.options[i];
-                if ( opt.selected === true ) {
+                if (opt.selected === true) {
                     break;
                 }
             }
             return opt;
         }
+
         // ANKET EKLEME
         function questionItem(qnType, id) {
-            var poll;
+            var question;
             if (qnType === "Multiple Choice") {
-                var optionID = "option" . id;
-                poll = $(`<div class="card mt-3" id="soru ${id}">
+                question = $(`<div class="card mt-3" id="q${id}">
                             <div class="card-header">
                     <input type="text" style="font-size:25px;" class="form-control" placeholder="Question" id="question">
                        <ul id="list" class="list-group mt-2">
@@ -97,7 +97,7 @@ else
                             </div>
                         </div>`);
             } else {
-                poll = $(`<div class="card mt-3" id="soru-${id}">
+                question = $(`<div class="card mt-3" id="q${id}">
                             <div class="card-header">
                     <input type="text" style="font-size:25px;" class="form-control" placeholder="Question" id="question">
                        <ul class="list-group mt-2">
@@ -109,19 +109,17 @@ else
                         </div>`);
             }
 
-            // SORU EKLEME
-            poll.find('.add-option').on('click', function () {
+            // ŞIK EKLEME
+            question.find('.add-option').on('click', function () {
                 var quesitionItem = $('<li class="list-group-item"> <div contentEditable="true"> <span contentEditable="false"> <input type="radio"/> </span>Option 1 </div> </li>').addClass('mt-2');
-                var question = poll.find('.question').val();
-                quesitionItem.find('.quesiton-name').text(question);
-                poll.find('.list-group').append(quesitionItem);
+                question.find('.list-group').append(quesitionItem);
                 var lis = document.getElementById("list").getElementsByTagName("li");
                 var MyDiv1 = document.getElementById('div').textContent;
                 console.log(lis);
                 console.log(MyDiv1);
             })
 
-            $questions.append(poll);
+            $questions.append(question);
             window.id += 1;
         }
 

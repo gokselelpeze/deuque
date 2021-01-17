@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row mt-4">
+        <div class="form-group col-4">
+            <input type="text" class="form-control" placeholder="Soru" id="pollName">
+        </div>
+        <div class="form-group col-4">
+            <input type="text" class="form-control" placeholder="Tür" id="pollType">
+        </div>
+        <button type="button" class="btn btn-primary col-4" id="addPool">Anket Ekle</button>
+        <button type="button" class="btn btn-primary col-4" id="savePool">Kaydet</button>
+    </div>
+    <div class="d-flex flex-column" id="polls">
+
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function (){
+        var $addPoll = $('#addPool');
+        var $polls = $('#polls');
+        var $savePool = $('#savePool');
+
+        window.id = 1;
+
+        $savePool.click(function (){
+            var data = {};
+            var questions = $('#polls .card .card-header').get().map(function (val) {
+                data[$(val).closest('.card').attr('id')] = val;
+            })
+
+            console.log(questions);
+        });
+
+        $addPoll.on('click', function () {
+            var pollName = $('#pollName').val();
+            var pollType = $('#pollType').val();
+            pollItem(pollName, pollType, window.id);
+        })
+
+
+        function pollItem(pollName, pollType, id){
+
+            var poll = $(`<div class="card mt-3" id="soru-${id}">
+                            <div class="card-header">${pollName}</div>
+                            <div class="card-body">
+                                ${pollType}
+                                <ul class="list-group">
+
+                                </ul>
+                            </div>
+                            <div class="card-footer d-flex justify-content-between row">
+                                <input type="text" class="form-control question" placeholder="Soru">
+                                <button type="button" class="btn btn-primary add-question">Soru Ekle</button>
+                            </div>
+                        </div>`);
+
+
+            poll.find('.add-question').on('click', function () {
+                var quesitionItem =  $('<li class="list-group-item"><span class="quesiton-name"></span></li>').addClass('bg-success mt-2');
+                var question = poll.find('.question').val();
+                quesitionItem.find('.quesiton-name').text(question);
+                poll.find('.list-group').append(quesitionItem);
+            })
+
+            $polls.append(poll);
+            window.id += 1;
+        }
+
+    });
+</script>
+</html>
