@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a4c4ca6-1a04-4254-b4b3-e6246fd7d6a2" name="Default Changelist" comment="login">
+    <list default="true" id="7a4c4ca6-1a04-4254-b4b3-e6246fd7d6a2" name="Default Changelist" comment="profil sayfası tamam gibi">
+      <change afterPath="$PROJECT_DIR$/application/controllers/signup.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/signup_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/pages/test_signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/443c347e-e8dd-4800-9bd0-349e5f08043f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/443c347e-e8dd-4800-9bd0-349e5f08043f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/about-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/about-us.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/answers.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/answers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/data.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login/data.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sections/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/guide.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/guide.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sections/header-user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sections/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/invalid.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login/invalid.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/login-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login/login-page.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/login_view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/questionnaires.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/questionnaires.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/show.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/login/signin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages/fill.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/fill.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages/profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pages/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pages/signup.php" afterDir="false" />
     </list>
+    <list id="ba15c748-5ebf-44ea-a35d-782058c0dbe0" name="Changes by gokhanelpeze" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +69,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -110,7 +100,8 @@
       <workItem from="1610737201208" duration="1989000" />
       <workItem from="1610748549061" duration="53000" />
       <workItem from="1610748624781" duration="1453000" />
-      <workItem from="1610800889202" duration="10280000" />
+      <workItem from="1610800889202" duration="39037000" />
+      <workItem from="1610885856949" duration="8030000" />
     </task>
     <task id="LOCAL-00001" summary="a">
       <created>1610563343217</created>
@@ -196,7 +187,56 @@
       <option name="project" value="LOCAL" />
       <updated>1610809750029</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="dizinler düzenlendi">
+      <created>1610811674420</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1610811674420</updated>
+    </task>
+    <task id="LOCAL-00014" summary="dizinler düzenlendi">
+      <created>1610811893285</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1610811893285</updated>
+    </task>
+    <task id="LOCAL-00015" summary="dizinler düzenlendi">
+      <created>1610813889769</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1610813889769</updated>
+    </task>
+    <task id="LOCAL-00016" summary="dizinler düzenlendi">
+      <created>1610815624688</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610815624688</updated>
+    </task>
+    <task id="LOCAL-00017" summary="dizinler düzenlendi">
+      <created>1610822516852</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1610822516852</updated>
+    </task>
+    <task id="LOCAL-00018" summary="profil sayfası tamam gibi">
+      <created>1610832949183</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1610832949184</updated>
+    </task>
+    <task id="LOCAL-00019" summary="profil sayfası tamam gibi">
+      <created>1610843856692</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1610843856692</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +276,9 @@
     <MESSAGE value="Revert &quot;Delete .idea directory&quot;&#10;&#10;This reverts commit ddca9382&#10;&#10;route ayarlandı" />
     <MESSAGE value="düzeltme" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="dizinler düzenlendi" />
+    <MESSAGE value="profil sayfası tamam gibi" />
+    <option name="LAST_COMMIT_MESSAGE" value="profil sayfası tamam gibi" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

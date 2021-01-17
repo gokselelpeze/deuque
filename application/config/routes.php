@@ -55,13 +55,14 @@ $route['logout'] = 'login/logout';
 $route['answers'] = 'main/data/';
 $route['login-page'] = 'main/login/';
 $route['signin'] = 'login/signin/';
-$route['signup'] = 'main/signup/';
 $route['profile/(:num)'] = 'main/profile/$1';
 $route['about-us'] = 'main/aboutUs/';
 $route['questionnaires'] = 'main/questionnaires/';
 $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
+$route['signup'] = 'signup';
+$route['validation'] = 'signup/validation';
 $route['questionnaire/(:any)'] = 'main/questionnaire/$1';
 $route['fill/(:any)'] = 'questionnaires/fill/$1';
 
