@@ -36,17 +36,38 @@ $qnsCount = json_decode(json_encode($count), true);
                 <?php
                 foreach ($questionnaires as $row)
                 {
-                    echo '<li class="d-flex justify-content-between list-group-item"><a href="'.base_url().'fill/'.$row['questionnaire_id'].'">'. $row['questionnaire_name'] .'</a>
-                <div>
-                    <button class="btn-secondary" disabled>Edit <i class="fa fa-pencil"></i></button>
-                    <button class="btn-primary">Publish <i class="fa fa-toggle-on"></i></button>
-                    <button class="btn-primary">Share <i class="fa fa-share-alt"></i></button>
-                </div>
-                </li>';
+                    echo '<li class="d-flex justify-content-between list-group-item"><a href="' .base_url(). 'fill/' .$row['questionnaire_id']. '">' . $row['questionnaire_name'] . '</a>
+    <div>
+        <button class="btn-secondary" disabled>Edit <i class="fa fa-pencil"></i></button>
+        <button class="btn-primary">Publish <i class="fa fa-toggle-on"></i></button>
+        <input type="text" value="'.base_url().'fill/'.$row['questionnaire_id'].'" id="myInput">
+
+
+<button class="btn-primary" onclick="myFunction(\''.base_url().'fill/'.$row['questionnaire_id'].'\')">
+  Copy<i class="fa fa-share-alt" ></i>
+  </button>
+
+
+    </div>
+</li>';
                 }
                 ?>
             </ul>
         </div>
     </div>
 </div>
+<script>
+    function myFunction(url) {
+        copyToClipboard(url);
+    }
+
+    function copyToClipboard(text) {
+        var dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+    }
+</script>
 <?php include dirname(__DIR__, 1) . '/sections/footer.php';?>
