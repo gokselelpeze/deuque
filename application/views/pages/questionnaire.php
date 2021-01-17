@@ -14,15 +14,17 @@ else
 <div class="container mt-5">
     <div class="d-flex">
         <div class="form-group col-12">
-            <div class="form-group col-4">
+            <div class="form-group">
                 <input type="text" class="form-control" placeholder="Untitled Questionnaire" id="qnName">
             </div>
-            <div class="form-group col-4">
+            <div class="form-group">
                 <input type="text" class="form-control" placeholder="Description" id="description">
-            </div>
-            <div class="form-group col-4">
-                <input type="text" class="form-control" placeholder="Type" id="qnType">
-            </div>
+            </div class="form-group">
+                <select id="qnType" name="qnType" class="custom-select mb-3">
+                    <option selected value="Multiple Choice">Multiple Choice</option>
+                    <option value="Paragraph">Paragraph</option>
+                </select>
+            </form>
         </div>
 
 
@@ -57,20 +59,32 @@ else
         });
 
         $addQuestion.on('click', function () {
-            var qnType = $('#qnType').val();
+            var sel = document.getElementById('qnType');
+            var qnType = getSelectedOption(sel).value;
+            console.log(qnType);
             questionItem(qnType, window.id);
         })
-
+        function getSelectedOption(sel) {
+            var opt;
+            for ( var i = 0, len = sel.options.length; i < len; i++ ) {
+                opt = sel.options[i];
+                if ( opt.selected === true ) {
+                    break;
+                }
+            }
+            return opt;
+        }
         // ANKET EKLEME
         function questionItem(qnType, id) {
             var poll;
             if (qnType === "Multiple Choice") {
-                poll = $(`<div class="card mt-3" id="soru-${id}">
+                var optionID = "option" . id;
+                poll = $(`<div class="card mt-3" id="soru ${id}">
                             <div class="card-header">
                     <input type="text" style="font-size:25px;" class="form-control" placeholder="Question" id="question">
-                       <ul class="list-group mt-2">
+                       <ul id="list" class="list-group mt-2">
                             <li class="list-group-item">
-                                <div contentEditable="true">
+                                <div id="optionID" contentEditable="true">
                                     <span contentEditable="false">
                                       <input type="radio"/>
                                     </span>Option 1
@@ -101,6 +115,10 @@ else
                 var question = poll.find('.question').val();
                 quesitionItem.find('.quesiton-name').text(question);
                 poll.find('.list-group').append(quesitionItem);
+                var lis = document.getElementById("list").getElementsByTagName("li");
+                var MyDiv1 = document.getElementById('div').textContent;
+                console.log(lis);
+                console.log(MyDiv1);
             })
 
             $questions.append(poll);
