@@ -62,10 +62,12 @@ $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
 $route['signup'] = 'signup';
-$route['qn'] = 'main/qn';
+$route['qn'] = 'questionnaires/qn';
+$route['create-question'] = 'questionnaires/createQuestion';
 $route['olusanAnket'] = 'main/olusanAnket';
+$route['import-question'] = 'questionnaires/importQuestion';
 $route['validation'] = 'signup/validation';
-$route['questionnaire/(:any)'] = 'main/questionnaire/$1';
+$route['questionnaire/(:any)'] = 'questionnaires/questionnaire/$1';
 $route['fill/(:any)'] = 'questionnaires/fill/$1';
 
 

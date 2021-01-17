@@ -44,17 +44,13 @@
         public function questionnaires(){
             $this->load->view("pages/questionnaires.php");
         }
-        public function questionnaire(){
-            $this->load->view("pages/questionnaire.php");
-        }
+
         public function oops(){
             $this->load->view("pages/oops.php");
         }
-        public function qn(){
-            $this->load->view("pages/qn.php");
-        }
         public function olusanAnket(){
-            $this->load->view("pages/olusanAnket.php");
+            $data['values'] = $this->input->post();
+            $this->load->view("pages/olusanAnket",$data);
         }
 
 

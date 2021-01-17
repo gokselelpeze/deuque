@@ -33,4 +33,44 @@ class questionnaires_model extends CI_Model
         return $query->result();
     }
 
+    public function insertQn($qnId){
+        $data = array(
+            'questionnaire_id' => $qnId,
+            'user_id' => $this->session->userdata('user_id'),
+            'questionnaire_type' => 0,
+            'questionnaire_name' => $this->input->post('qnName'),
+            'questionnaire_subtext' => $this->input->post('description'),
+            'participant_count' => 0,
+            'publish_status' => 0,
+        );
+
+        return $this->db->insert('questionnaires', $data);
+    }
+    public function insertQuestion(){
+        $data = array(
+            'questionnaire_id' => $this->input->post('qnId'),
+            'question_name' => $this->input->post('questionName'),
+            'question_subtext' => $this->input->post('questionDescription'),
+            'option_1' => $this->input->post('option1'),
+            'option_2' => $this->input->post('option2'),
+            'option_3' => $this->input->post('option3'),
+            'option_4' => $this->input->post('option4'),
+            'option_5' => $this->input->post('option5'),
+            'option_6' => $this->input->post('option6'),
+            'option_7' => $this->input->post('option7'),
+            'option_8' => $this->input->post('option8'),
+        );
+       /* $length = 8;
+        $optCount = 0;
+        for ($i=1;$i<=$length;$i++) {
+            $entry = $this->input->post("option".$i);
+            if (!empty($entry)) {
+                $data["sib".$i] = $entry;
+                $sibcount++;
+            }
+        }*/
+
+        return $this->db->insert('questions', $data);
+    }
+
 }
