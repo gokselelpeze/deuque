@@ -21,7 +21,7 @@ $userInfo = json_decode(json_encode($user), true);
                         break;
                     echo '<div class="my-1">
             <input class="form-check-input" type="radio" name="' . $question['question_id'] . '" value="' . $question['option_' . ($i + 1)] . '">
-            <label class="form-check-label" for="exampleRadios1">
+            <label class="form-check-label" for="' . $question['question_id'] . '">
                 ' . $question['option_' . ($i + 1)] . '
             </label>
     </div>';

@@ -36,7 +36,7 @@ $qnsCount = json_decode(json_encode($count), true);
                 <?php
                 foreach ($questionnaires as $row)
                 {
-                    echo '<li class="d-flex justify-content-between list-group-item"><a href="#">'. $row['questionnaire_name'] .'</a>
+                    echo '<li class="d-flex justify-content-between list-group-item"><a href="'.base_url().'fill/'.$row['questionnaire_id'].'">'. $row['questionnaire_name'] .'</a>
                 <div>
                     <button class="btn-secondary" disabled>Edit <i class="fa fa-pencil"></i></button>
                     <button class="btn-primary">Publish <i class="fa fa-toggle-on"></i></button>
