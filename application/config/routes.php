@@ -63,10 +63,11 @@ $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
 $route['questionnaire/(:any)'] = 'main/questionnaire/$1';
-$route['oops'] = 'main/oops/';
+$route['fill/(:any)'] = 'questionnaires/fill/$1';
 
 
 
 
-$route['404_override'] = '';
+
+$route['404_override'] = 'main/oops';
 $route['translate_uri_dashes'] = FALSE;
