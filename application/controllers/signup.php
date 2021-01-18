@@ -2,6 +2,7 @@
 
 class signup extends CI_Controller{
     public function index(){
+        $email = $this->input->post("emailSign");
         $this->load->helper(array('form', 'url'));
 
         $this->load->library('form_validation');
@@ -14,7 +15,15 @@ class signup extends CI_Controller{
 
         if ($this->form_validation->run() === FALSE)
         {
-            $this->load->view('pages/signup');
+            if($email == null){
+                $data['userEmail'] = "";
+                $this->load->view('pages/signup', $data);
+            }
+            else{
+                $data['userEmail'] = $email;
+                $this->load->view('pages/signup', $data);
+            }
+
         }
         else
         {

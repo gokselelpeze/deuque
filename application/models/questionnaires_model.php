@@ -7,6 +7,18 @@ class questionnaires_model extends CI_Model
         $query = $this->db->get('questionnaires');
         return $query->result();
     }
+    public function getRecentQns()
+    {
+        $this->db->order_by('datetime_created', 'DESC');
+        $query = $this->db->get('questionnaires', 5);
+        return $query->result();
+    }
+    public function getPopularQns()
+    {
+        $this->db->order_by('participant_count', 'DESC');
+        $query = $this->db->get('questionnaires', 5);
+        return $query->result();
+    }
     public function getSearchedQns($searched)
     {
         $this->db->like('questionnaire_name', $searched, 'both');

@@ -34,7 +34,7 @@ else
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control text-lowercase" id="email" name="email" placeholder="Enter mail(e.g. someone@domain.com)" required>
+                            <input type="text" class="form-control text-lowercase" id="email" name="email" placeholder="Enter mail(e.g. someone@domain.com)" required value="<?php echo $userEmail?>">
                             <div class="valid-feedback">Valid.</div>
                             <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
