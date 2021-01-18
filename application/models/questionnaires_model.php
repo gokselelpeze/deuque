@@ -7,6 +7,12 @@ class questionnaires_model extends CI_Model
         $query = $this->db->get('questionnaires');
         return $query->result();
     }
+    public function getSearchedQns($searched)
+    {
+        $this->db->like('questionnaire_name', $searched);
+        $query = $this->db->get('questionnaires');
+        return $query->result();
+    }
 
     public function getQnsCount($userId)
     {

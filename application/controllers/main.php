@@ -32,6 +32,16 @@
             else
                 $this->load->view("pages/oops.php");
         }
+        public function search($param = ''){
+            $searched = $this->input->post("username");
+            $param = $searched;
+            $this->load->model("questionnaires_model");
+            $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
+            $data['key'] = $searched;
+
+            $this->load->view("pages/search.php",$data);
+        }
+
         public function aboutUs(){
             $this->load->view("pages/about-us.php");
         }
@@ -47,10 +57,6 @@
 
         public function oops(){
             $this->load->view("pages/oops.php");
-        }
-        public function olusanAnket(){
-            $data['values'] = $this->input->post();
-            $this->load->view("pages/olusanAnket",$data);
         }
 
 

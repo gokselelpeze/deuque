@@ -63,12 +63,12 @@ $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
 $route['signup'] = 'signup';
 $route['create-question'] = 'questionnaires/createQuestion';
-$route['olusanAnket'] = 'main/olusanAnket';
 $route['import-question'] = 'questionnaires/importQuestion';
 $route['validation'] = 'signup/validation';
 $route['questionnaire/(:any)'] = 'questionnaires/questionnaire/$1';
 $route['fill/(:any)'] = 'questionnaires/fill/$1';
 $route['responses/(:any)'] = 'questionnaires/responses/$1';
+$route['search'] = 'main/search/$1';
 
 
 

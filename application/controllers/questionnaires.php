@@ -8,8 +8,6 @@ class questionnaires extends CI_Controller{
         $data['usersQns'] = $this->questionnaires_model->getUsersQns($this->session->userdata('user_id'));
         $data['user'] = $this->questionnaires_model->getUserById($this->session->userdata('user_id'));
         $this->load->view("pages/test.php",$data);
-
-
     }
 
     public function fill($param=''){
