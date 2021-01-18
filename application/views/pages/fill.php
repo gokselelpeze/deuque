@@ -3,6 +3,9 @@ if ($this->session->userdata('currently_logged_in'))
     include dirname(__DIR__, 1) . '/sections/header-user.php';
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
+$uId = 100;
+if($this->session->userdata('user_id') != null)
+    $uId = $this->session->userdata('user_id');
 $qnInfo = json_decode(json_encode($qn), true);
 $questionsInfo = json_decode(json_encode($questions), true);
 $userInfo = json_decode(json_encode($user), true);
@@ -22,6 +25,9 @@ $userInfo = json_decode(json_encode($user), true);
 
     <div class="ml-5 ">
         <form>
+            <div style="display: none">
+                <input type="text" value="<?php echo $uId?>"></input>
+            </div>
             <?php foreach ($questionsInfo as $question) {
                 echo '<div class="question mb-5">';
                 echo '<fieldset id="' . $question['question_id'] . '">';

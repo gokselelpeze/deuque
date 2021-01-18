@@ -14,7 +14,7 @@ class questionnaires extends CI_Controller{
         $this->load->model("questionnaires_model");
         $data['qn'] = $this->questionnaires_model->getQn($param);
         if($data['qn'] == null){
-            redirect(oops);
+            redirect('oops');
         }
         $data['questions'] = $this->questionnaires_model->getQuestions($param);
         $qnInfo = json_decode(json_encode($data['qn']), true);
@@ -27,7 +27,7 @@ class questionnaires extends CI_Controller{
         $this->load->model("questionnaires_model");
         $data['qn'] = $this->questionnaires_model->getQn($param);
         if($data['qn'] == null){
-            redirect(oops);
+            redirect('oops');
         }
         $data['questions'] = $this->questionnaires_model->getQuestions($param);
         $qnInfo = json_decode(json_encode($data['qn']), true);
