@@ -81,6 +81,15 @@ class questionnaires extends CI_Controller{
         }
     }
 
+    public function sendAnswers(){
+        $this->load->model('questionnaires_model');
+        $answers = $this->input->post();
+        $insert = $this->questionnaires_model->insertAnswer($answers);
+        if ($insert){
+            $this->load->view('sections/saved-successfully');
+        }
+    }
+
     function generateRandomString($length = 10) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-';
         $charactersLength = strlen($characters);
