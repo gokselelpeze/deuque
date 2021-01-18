@@ -33,7 +33,7 @@
                 $this->load->view("pages/oops.php");
         }
         public function search($param = ''){
-            $searched = $this->input->post("username");
+            $searched = $this->input->post("searched");
             $param = $searched;
             $this->load->model("questionnaires_model");
             $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
