@@ -38,10 +38,6 @@ class questionnaires extends CI_Controller{
         $this->load->view("pages/responses.php",$data);
     }
 
-    public function qn(){
-        $this->load->view("pages/qn.php");
-    }
-
     public function questionnaire(){
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');

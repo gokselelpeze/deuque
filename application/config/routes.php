@@ -62,7 +62,6 @@ $route['contact'] = 'main/contact/';
 $route['show'] = 'main/show/';
 $route['test'] = 'questionnaires/questionnaireTest/';
 $route['signup'] = 'signup';
-$route['qn'] = 'questionnaires/qn';
 $route['create-question'] = 'questionnaires/createQuestion';
 $route['olusanAnket'] = 'main/olusanAnket';
 $route['import-question'] = 'questionnaires/importQuestion';
