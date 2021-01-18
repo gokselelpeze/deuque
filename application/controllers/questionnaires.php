@@ -15,6 +15,9 @@ class questionnaires extends CI_Controller{
     public function fill($param=''){
         $this->load->model("questionnaires_model");
         $data['qn'] = $this->questionnaires_model->getQn($param);
+        if($data['qn'] == null){
+            redirect(oops);
+        }
         $data['questions'] = $this->questionnaires_model->getQuestions($param);
         $qnInfo = json_decode(json_encode($data['qn']), true);
         $userID = $qnInfo[0]['user_id'];
