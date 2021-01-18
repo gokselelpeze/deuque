@@ -37,7 +37,7 @@
             $param = $searched;
             $this->load->model("questionnaires_model");
             $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
-            $data['key'] = $searched;
+            $data['searchedUsers'] = $this->questionnaires_model->getSearchedUsers($searched);
 
             $this->load->view("pages/search.php",$data);
         }

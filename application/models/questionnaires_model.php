@@ -10,7 +10,17 @@ class questionnaires_model extends CI_Model
     public function getSearchedQns($searched)
     {
         $this->db->like('questionnaire_name', $searched, 'both');
+        $this->db->or_like('questionnaire_subtext', $searched, 'both');
         $query = $this->db->get('questionnaires');
+
+        return $query->result();
+    }
+    public function getSearchedUsers($searched)
+    {
+        $this->db->like('user_name', $searched, 'both');
+        $this->db->or_like('name', $searched, 'both');
+        $this->db->or_like('surname', $searched, 'both');
+        $query = $this->db->get('users');
 
         return $query->result();
     }
