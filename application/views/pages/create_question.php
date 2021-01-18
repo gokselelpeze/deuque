@@ -12,7 +12,10 @@ else
         <div class="form-group col-12 jumbotron">
             <form method="post" action="<?php echo base_url()?>import-question">
                 <div class="form-group" style="display: none">
-                    <input type="text" class="form-control" placeholder="Enter Question" id="qnId" name="qnId" value="<?php echo $qnId?>">
+                    <input type="text" class="form-control" id="qnId" name="qnId" value="<?php echo $qnId?>">
+                </div>
+                <div class="form-group" style="display: none">
+                    <input type="text" class="form-control" id="qnName" name="qnName" value="<?php echo $qnName?>">
                 </div>
                 <div class="form-group">
                     <label for="qnName">Question: </label>
