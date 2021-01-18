@@ -65,6 +65,21 @@ class questionnaires_model extends CI_Model
 
         return $this->db->insert('questionnaires', $data);
     }
+    public function insertAnswer($answers){
+        foreach($answers as $key => $value)
+        {
+            if ($key != 'uId' and $key != 'qnId'){
+                $data = array(
+                    'user_id' => $answers['uId'],
+                    'questionnaire_id' => $answers['qnId'],
+                    'question_id' => $key,
+                    'answer' => $value
+                );
+                $this->db->insert('answers', $data);
+            }
+        }
+        return true;
+    }
     public function insertQuestion(){
         $data = array(
             'questionnaire_id' => $this->input->post('qnId'),
@@ -79,16 +94,6 @@ class questionnaires_model extends CI_Model
             'option_7' => $this->input->post('option7'),
             'option_8' => $this->input->post('option8'),
         );
-       /* $length = 8;
-        $optCount = 0;
-        for ($i=1;$i<=$length;$i++) {
-            $entry = $this->input->post("option".$i);
-            if (!empty($entry)) {
-                $data["sib".$i] = $entry;
-                $sibcount++;
-            }
-        }*/
-
         return $this->db->insert('questions', $data);
     }
 

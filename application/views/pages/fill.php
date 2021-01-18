@@ -24,9 +24,10 @@ $userInfo = json_decode(json_encode($user), true);
     <h2 class="text-secondary text-center"><?php echo $qnInfo[0]['questionnaire_subtext'] ?></h2>
 
     <div class="ml-5 ">
-        <form>
+        <form action="<?php echo base_url()?>send-answers" method="post">
             <div style="display: none">
-                <input type="text" value="<?php echo $uId?>"></input>
+                <input type="text" name="uId" value="<?php echo $uId?>"></input>
+                <input type="text" name="qnId" value="<?php echo $qnInfo[0]['questionnaire_id']?>"></input>
             </div>
             <?php foreach ($questionsInfo as $question) {
                 echo '<div class="question mb-5">';
@@ -38,20 +39,23 @@ $userInfo = json_decode(json_encode($user), true);
                         break;
                     echo '<div class="my-1">
             <input class="form-check-input ml-1" type="radio" name="' . $question['question_id'] . '" value="' . $question['option_' . ($i + 1)] . '">
-            <label class="form-check-label ml-4" for="' . $question['question_id'] . '">
-                ' . $question['option_' . ($i + 1)] . '
-            </label>
+            <label class="form-check-label ml-4" for="' . $question['question_id'] . '">' . $question['option_' . ($i + 1)] . '</label>
     </div>';
                 }
                 echo '</fieldset>';
                 echo '</div>';
             } ?>
-            <button type="submit" class="btn btn-primary col-4 m-3" id="fillForm">Send</button>
+            <button type="submit" class="btn btn-primary col-4 m-3" id="fillForm">Send Answers</button>
         </form>
     </div>
     <h5 class="float-right"><strong>Creator:</strong> <a href="<?php echo base_url().'profile/'.$userInfo[0]['user_id'] ?>"><?php echo $userInfo[0]['user_name'] ?></a></h5>
 </div>
 </page>
 
-
+<script>
+    $(document).ready(function() {
+        if($("input:radio[name='yourRadioName']").is(":checked")) {
+            //its checked
+        }
+</script>
 <?php include dirname(__DIR__, 1) . '/sections/footer.php'; ?>

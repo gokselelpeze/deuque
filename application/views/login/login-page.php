@@ -19,8 +19,7 @@ else
                                     <input type="text" class="form-control text-lowercase" id="username" required="" name="username" value="">
                                 </div>
                                 <div class="form-group required">
-                                    <label class="d-flex flex-row align-items-center" for="password">Password
-                                        <a class="ml-auto border-link small-xl" href="/forget-password">Forget?</a></label>
+                                    <label class="d-flex flex-row align-items-center" for="password">Password</label>
                                     <input type="password" class="form-control" required="" id="password" name="password" value="">
                                 </div>
                                 <div class="form-group mt-4 mb-4">
