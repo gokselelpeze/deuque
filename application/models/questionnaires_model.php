@@ -9,8 +9,9 @@ class questionnaires_model extends CI_Model
     }
     public function getSearchedQns($searched)
     {
-        $this->db->like('questionnaire_name', $searched);
+        $this->db->like('questionnaire_name', 'anket', 'both');
         $query = $this->db->get('questionnaires');
+
         return $query->result();
     }
 
