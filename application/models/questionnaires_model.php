@@ -78,6 +78,22 @@ class questionnaires_model extends CI_Model
         return $this->db->insert('questionnaires', $data);
     }
     public function insertAnswer($answers){
+        if ($this->session->userdata('user_id') == null){
+            $uId = rand(1000000,2147483647);
+            $datetime = date('Y-m-d H:i:s');
+            $data = array(
+                'user_id' => $uId,
+                'user_type' => 0,
+                'user_name' => 'anonymous',
+                'user_password' => '16541fs5d4d1s1654sdf',
+                'name' => 'anonymous',
+                'surname' => 'anonymous',
+                'user_mail' => 'anonymous@anonymous.com',
+                'user_joinDate' => $datetime
+            );
+            $this->db->insert('users', $data);
+            $answers['uId'] = $uId;
+        }
         foreach($answers as $key => $value)
         {
             if ($key != 'uId' and $key != 'qnId'){

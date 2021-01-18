@@ -3,7 +3,7 @@ if ($this->session->userdata('currently_logged_in'))
     include dirname(__DIR__, 1) . '/sections/header-user.php';
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
-$uId = 100;
+$uId = 10000;
 if($this->session->userdata('user_id') != null)
     $uId = $this->session->userdata('user_id');
 $qnInfo = json_decode(json_encode($qn), true);
