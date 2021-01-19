@@ -29,8 +29,9 @@ $users = json_decode(json_encode($searchedUsers), true);
                     </a>
                     ' . $row['questionnaire_subtext'] . '
                 </p>
-                <button> Delete</button>
-                
+                <a href ="' . base_url() . 'delete/' . $row['questionnaire_id'] . '">
+                    <button>Delete</button>
+                </a>
             </div>';
             }
             ?>
@@ -69,6 +70,5 @@ $users = json_decode(json_encode($searchedUsers), true);
         </div>
 
     </div>
-
 
 <?php include dirname(__DIR__, 1) . '/sections/footer.php'; ?>
