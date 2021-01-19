@@ -126,6 +126,14 @@ class questionnaires_model extends CI_Model
         return $this->db->insert('questions', $data);
     }
 
+    public function getAnswers($qnId,$questionId){
+        $this->db->where('questionnaire_id', $qnId);
+        $this->db->where('question_id', $questionId);
+        $this->db->select('answer');
+        $answers = $this->db->get('answers');
+        return $answers->result();
+    }
+
     public function increaseParticipantCount($qnId){
 
     }

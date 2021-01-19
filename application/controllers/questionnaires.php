@@ -33,6 +33,31 @@ class questionnaires extends CI_Controller{
         $qnInfo = json_decode(json_encode($data['qn']), true);
         $userID = $qnInfo[0]['user_id'];
         $data['user'] = $this->questionnaires_model->getUserById($userID);
+        $questions = json_decode(json_encode($data['questions']), true);
+        $i = 0;
+        foreach ($questions as $qs){
+            $answers = $this->questionnaires_model->getAnswers($qnInfo[0]['questionnaire_id'],$qs['question_id']);
+            $ansInfo = json_decode(json_encode($answers), true);
+            /*var_dump($ansInfo);*/
+            $j = 0;
+            foreach ($ansInfo as $ans){
+                $ansArray[$j] = $ans['answer'];
+                $j++;
+            }
+            $countArray = (array_count_values($ansArray));
+            /*print_r($countArray);*/
+            $data['answerInfo'][$i]['questionId'] = $qs['question_id'];
+            $data['answerInfo'][$i]['questionName'] = $qs['question_name'];
+            $j = 0;
+            foreach ($countArray as $key => $value){
+                $data['answerInfo'][$i]['answer-'.$j] = $key;
+                $data['answerInfo'][$i]['ansCount-'.$j] = $value;
+                $j++;
+            }
+
+            $i++;
+        }
+
         $this->load->view("pages/responses.php",$data);
     }
 

@@ -6,6 +6,7 @@ else
 $qnInfo = json_decode(json_encode($qn), true);
 $questionsInfo = json_decode(json_encode($questions), true);
 $userInfo = json_decode(json_encode($user), true);
+var_dump($answerInfo);
 ?>
 <page size="A4">
     <nav class="d-flex justify-content-lg-center">
