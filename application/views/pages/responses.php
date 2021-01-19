@@ -36,38 +36,40 @@ var_dump($answerInfo);
 
         <?php
         $count = 1;
-        foreach ($questionsInfo
-
-                 as $row) {
+        foreach ($answerInfo as $question) {
             ?>
             <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
             <script>
 
                 $(document).ready(function () {
                     <?php
-                    $phpArray = array();
-                    for ($i = 0; $i < 8; $i++) {
-                        if ($row['option_' . ($i + 1)] != null)
-                            $phpArray[$i] = $row['option_' . ($i + 1)];
+                    $answers = array();
+                    $answerCount = array();
+
+                    for ($i = 0; $i < (sizeof($question) - 2) / 2; $i++) {
+                        $answers[$i] = $question['answer-'.($i)];
+                        $answerCount[$i] = $question['ansCount-'.($i)];
                     }
                     ?>
                     window.id = 1;
-                    var labelArr = <?php echo json_encode($phpArray); ?>;
-                    console.log(labelArr);
+                    var optionsArr = <?php echo json_encode($answers); ?>;
+                    var optionsCountArr = <?php echo json_encode($answerCount); ?>;
+
+                    console.log(optionsArr);
                     var ctx = $("#chart-line<?php echo $count?>");
                     var myLineChart = new Chart(ctx, {
                         type: 'pie',
                         data: {
-                            labels: labelArr,
+                            labels: optionsArr,
                             datasets: [{
-                                data: [25, 5, 2, 15, 38, 3, 44, 20],
+                                data: optionsCountArr,
                                 backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)"]
                             }]
                         },
                         options: {
                             title: {
                                 display: true,
-                                text: "<?php echo $row['question_name']?>"
+                                text: "<?php echo 'Q'.$count .') '.$question['questionName']?>"
                             }
                         }
                     });
@@ -77,10 +79,10 @@ var_dump($answerInfo);
                     var myBarChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: labelArr,
+                            labels: optionsArr,
                             datasets: [{
-                                data: [25, 5, 2, 15, 38, 3, 44, 20],
-                                label: "Options",
+                                data: [1,2,3],
+                                label: "Answers",
                                 borderColor: "#458af7",
                                 backgroundColor: '#458af7',
                                 fill: false
@@ -89,7 +91,7 @@ var_dump($answerInfo);
                         options: {
                             title: {
                                 display: true,
-                                text: "<?php echo $row['question_name']?>"
+                                text: "<?php echo 'Q)'.$count .$question['questionName']?>"
                             }
                         }
                     });
