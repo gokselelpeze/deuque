@@ -5,7 +5,7 @@ else
     include dirname(__DIR__, 1) . '/sections/header.php';
 
 ?>
-<div class="container">
+<div class="container mt-3">
     <h1 class="text-center">Create Questionnaire</h1>
     <div class="d-flex">
         <div class="form-group col-12">

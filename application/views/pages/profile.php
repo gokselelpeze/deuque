@@ -8,10 +8,8 @@ $userInfo = json_decode(json_encode($user), true);
 $qnsCount = json_decode(json_encode($count), true);
 ?>
 <div class="container">
-    <div><p><label for="x"></label></p></div>
-    <div><p><label for="x"></label></p></div>
 
-    <div class="row mt-4 ml-3">
+    <div class="row mt-5 ml-3">
         <div class="col-md-4 col-4">
             <div class="card">
                 <div class="d-flex justify-content-center">
@@ -27,7 +25,7 @@ $qnsCount = json_decode(json_encode($count), true);
             </div>
         </div>
         <div class="col-8">
-            <label for=""></label> <strong>QUESTIONNAIRES</strong>
+            <h2><strong>QUESTIONNAIRES</strong></h2>
             <ul class=" list-group p-2">
                 <?php
                 foreach ($questionnaires as $row)

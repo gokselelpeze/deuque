@@ -17,17 +17,23 @@ h1{
 
 }
 body{
+    padding-top: 60px;
+
     color: var(--secondary);
     background: var(--secondary);
 }
 text{
-    color: var(--secondary);
+    color: black;
     font-size: 16pt;
     text-align: center;
 
 }
-h2{
+h2,h3,h4,h5{
     color: black;
     font-size: 16pt;
 }
+label,dd{
+    color: black;
+}
+
 

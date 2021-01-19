@@ -5,7 +5,7 @@ else
     include dirname(__DIR__, 1) . '/sections/header.php';
 
 ?>
-<div class="container">
+<div class="container mt-3">
     <h1 class="text-center display-3"><?php echo $qnName?></h1>
     <h4 class="text-center">Your questionnaires link will be:<br><a href="<?php echo base_url().'fill/'.$qnId?>"><?php echo base_url().'fill/'.$qnId?></a></h4>
     <div class="d-flex">

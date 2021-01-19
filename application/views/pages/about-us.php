@@ -5,12 +5,12 @@ else
     include dirname(__DIR__, 1) . '/sections/header.php';
 ?>
     <div class="container mt-5">
-        <div class="row py-3">
-            <div class="col-12 mt-5">
+        <div class="row ">
+            <div class="col-12 ">
                 <h4>We are a team from Dokuz Eylül University Computer Engineering students.</h4><br>
-                <p>You can access our social media profiles from the links below.</p>
+                <h5>You can access our social media profiles from the links below.</h5>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mt-5">
                 <div class="card">
                     <img class="card-img-top" src="<?php echo base_url() ?>assets/img/ibrahim.jpg" alt="Card image"
                          style="width:100%">
@@ -33,7 +33,7 @@ else
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mt-5">
                 <div class="card">
                     <img class="card-img-top" src="<?php echo base_url() ?>assets/img/ibrahim.jpg" alt="Card image"
                          style="width:100%">
@@ -56,7 +56,7 @@ else
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 mt-5">
                 <div class="card">
                     <img class="card-img-top" src="<?php echo base_url() ?>assets/img/ibrahim.jpg" alt="Card image"
                          style="width:100%">

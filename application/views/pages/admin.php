@@ -8,8 +8,8 @@ $users = json_decode(json_encode($searchedUsers), true);
 
 ?>
 
-    <div class="jumbotron">
-        <div class="my-3 p-3 bg-white rounded shadow-sm">
+    <div class="container mt-5">
+        <div class="my-3 p-3 bg-white rounded shadow-sm ">
             <?php
 
             echo '<h6 class="border-bottom border-gray pb-2 mb-0">' . sizeof($questionnaires) . ' Questionnaire Found</h6>';
@@ -30,7 +30,7 @@ $users = json_decode(json_encode($searchedUsers), true);
                     ' . $row['questionnaire_subtext'] . '
                 </p>
                 <a href ="' . base_url() . 'delete/' . $row['questionnaire_id'] . '">
-                    <button>Delete</button>
+                    <button class="bg-primary">Delete</button>
                 </a>
             </div>';
             }

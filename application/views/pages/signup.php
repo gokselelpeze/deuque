@@ -5,7 +5,7 @@ else
     include dirname(__DIR__, 1) . '/sections/header.php';
 ?>
 <div class="container">
-    <div class="pt-5 mt-5">
+    <div class="pt-5">
         <h1 class="text-center">Sign up</h1>
         <div class="row">
             <div class="col-md-5 mx-auto">

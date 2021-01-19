@@ -4,7 +4,7 @@ if ($this->session->userdata('currently_logged_in'))
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
 ?>
-<div class="container contact">
+<div class="container contact mt-3">
     <div class="row">
         <div class="col-md-4 col-4"">
             <div class="contact-info">
@@ -13,8 +13,6 @@ else
                 <h4>We would love to hear from you !</h4>
             </div>
         </div>
-
-
         <div class="col-md-9">
             <div class="contact-form">
                 <div class="form-group">
@@ -43,7 +41,7 @@ else
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-primary ">Submit</button>
                     </div>
                 </div>
             </div>
