@@ -76,6 +76,19 @@ class main extends CI_Controller
     {
         $this->load->view("pages/oops.php");
     }
+    public function admin()
+    {
+        if($this->session->userdata('user_type') == 1){
+            $searched = "";
+            $this->load->model("questionnaires_model");
+            $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
+            $data['searchedUsers'] = $this->questionnaires_model->getSearchedUsers($searched);
+            $this->load->view("pages/admin.php",$data);
+        }
+        else{
+            $this->load->view("pages/oops.php");
+        }
+    }
 
 
 }

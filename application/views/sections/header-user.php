@@ -39,10 +39,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url(); ?>contact">Contact</a>
                     </li>
+
                 </ul>
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="admin">
+                        <a  class="nav-link" href="<?php echo base_url(); ?>admin">Admin Panel</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>profile/<?php echo $this->session->userdata('user_id') ?>">Profile</a>
                     </li>
@@ -52,3 +56,11 @@
                 </ul>
             </div>
         </nav>
+        <script>
+            var sessionValue= "<?php echo $this->session->userdata('user_type')?>";
+            console.log(sessionValue);
+            if (!sessionValue){
+                //Hiding Admin Panel
+                document.getElementById('admin').style.display = 'none';
+            }
+        </script>
