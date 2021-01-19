@@ -72,6 +72,5 @@
             }
             else{
                 document.getElementById('search').setAttribute('action','admin')
-
             }
         </script>

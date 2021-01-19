@@ -21,10 +21,14 @@ class questionnaires_model extends CI_Model
     }
     public function getSearchedQns($searched)
     {
-        $this->db->like('questionnaire_name', $searched, 'both');
+/*        $this->db->like('questionnaire_name', $searched, 'both');
         $this->db->or_like('questionnaire_subtext', $searched, 'both');
         $this->db->or_like('questionnaire_id', $searched, 'both');
-        $query = $this->db->get('questionnaires');
+        $this->db->or_like('question_name', $searched, 'both');
+        $this->db->or_like('question_subtext', $searched, 'both');
+        $query = $this->db->get('searchquestion_view');*/
+        $query = $this->db->query('SELECT * FROM searchquestion_view 
+                        WHERE questionnaire_name like "%'.$searched.'%" OR questionnaire_id like "%'.$searched.'%" OR question_name like "%'.$searched.'%" OR question_subtext like "%'.$searched.'%"');
 
         return $query->result();
     }
