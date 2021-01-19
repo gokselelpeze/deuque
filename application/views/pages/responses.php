@@ -4,9 +4,7 @@ if ($this->session->userdata('currently_logged_in'))
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
 $qnInfo = json_decode(json_encode($qn), true);
-$questionsInfo = json_decode(json_encode($questions), true);
 $userInfo = json_decode(json_encode($user), true);
-var_dump($answerInfo);
 ?>
 <page size="A4">
     <nav class="d-flex justify-content-lg-center">
@@ -18,22 +16,9 @@ var_dump($answerInfo);
             <a href="<?php echo base_url(); ?>responses/<?php echo $qnInfo[0]['questionnaire_id'] ?>">Responses</a>
         </div>
     </nav>
-    <div class="container mt-5 py-5">
+    <div class="container py-5">
         <h1 class="text-center"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
         <h2 class="text-secondary text-center"><?php echo $qnInfo[0]['questionnaire_subtext'] ?></h2>
-        <!--        <div class="">
-            <ul class=" list-group p-2">
-                <?php
-        /*                for ($i = 0; $i < 8; $i++) {
-                            if ($questionsInfo[0]['option_' . ($i + 1)] != null) {
-                                echo '<li class="d-flex justify-content-between list-group-item">
-                    <label for="option ' . $i . '">' . $questionsInfo[0]['option_' . ($i + 1)] . '</label>
-                                        </li>';
-                            }
-                        }
-                        */ ?>
-            </ul>-->
-
         <?php
         $count = 1;
         foreach ($answerInfo as $question) {
@@ -45,17 +30,14 @@ var_dump($answerInfo);
                     <?php
                     $answers = array();
                     $answerCount = array();
-
                     for ($i = 0; $i < (sizeof($question) - 2) / 2; $i++) {
-                        $answers[$i] = $question['answer-'.($i)];
-                        $answerCount[$i] = $question['ansCount-'.($i)];
+                        $answers[$i] = $question['answer-' . ($i)];
+                        $answerCount[$i] = $question['ansCount-' . ($i)];
                     }
                     ?>
                     window.id = 1;
                     var optionsArr = <?php echo json_encode($answers); ?>;
                     var optionsCountArr = <?php echo json_encode($answerCount); ?>;
-
-                    console.log(optionsArr);
                     var ctx = $("#chart-line<?php echo $count?>");
                     var myLineChart = new Chart(ctx, {
                         type: 'pie',
@@ -63,13 +45,13 @@ var_dump($answerInfo);
                             labels: optionsArr,
                             datasets: [{
                                 data: optionsCountArr,
-                                backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)"]
+                                backgroundColor: ["rgba(255, 0, 0, 0.5)", "rgba(100, 255, 0, 0.5)", "rgba(200, 50, 255, 0.5)", "rgba(255, 255, 0, 0.5)", "rgba(0, 0, 255, 0.5)", "rgba(255, 127, 0, 0.5)", "rgba(75, 0, 130, 0.5)", "rgba(148, 0, 211, 0.5)"]
                             }]
                         },
                         options: {
                             title: {
                                 display: true,
-                                text: "<?php echo 'Q'.$count .') '.$question['questionName']?>"
+                                text: "<?php echo 'Q' . $count . ') ' . $question['questionName']?>"
                             }
                         }
                     });
@@ -81,7 +63,7 @@ var_dump($answerInfo);
                         data: {
                             labels: optionsArr,
                             datasets: [{
-                                data: [1,2,3],
+                                data: optionsCountArr,
                                 label: "Answers",
                                 borderColor: "#458af7",
                                 backgroundColor: '#458af7',
@@ -91,7 +73,7 @@ var_dump($answerInfo);
                         options: {
                             title: {
                                 display: true,
-                                text: "<?php echo 'Q)'.$count .$question['questionName']?>"
+                                text: "<?php echo 'Q' . $count . ') ' . $question['questionName']?>"
                             }
                         }
                     });
@@ -110,7 +92,6 @@ var_dump($answerInfo);
                 <!-- The slideshow -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <label for="Bar Chart">Bar Chart</label>
                         <div class="page-content page-container" id="page-content">
                             <div class="padding">
                                 <div class="row">
@@ -137,7 +118,6 @@ var_dump($answerInfo);
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <label for="Bar Chart">Bar Chart</label>
                         <div class="page-content page-container" id="page-content">
                             <div class="padding">
                                 <div class="row">
@@ -182,8 +162,8 @@ var_dump($answerInfo);
         <h5 class="float-right"><strong>Creator:</strong> <a
                     href="<?php echo base_url() . 'profile/' . $userInfo[0]['user_id'] ?>"><?php echo $userInfo[0]['user_name'] ?></a>
         </h5>
-
+    </div>
 </page>
-
-
 <?php include dirname(__DIR__, 1) . '/sections/footer.php'; ?>
+
+

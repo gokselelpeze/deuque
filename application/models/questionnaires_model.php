@@ -23,6 +23,7 @@ class questionnaires_model extends CI_Model
     {
         $this->db->like('questionnaire_name', $searched, 'both');
         $this->db->or_like('questionnaire_subtext', $searched, 'both');
+        $this->db->or_like('questionnaire_id', $searched, 'both');
         $query = $this->db->get('questionnaires');
 
         return $query->result();
@@ -154,6 +155,16 @@ class questionnaires_model extends CI_Model
         $this->db->set('publish_status', 1, FALSE);
         $this->db->where('questionnaire_id',$qnId);
         $this->db->update('questionnaires');
+    }
+    public function deleteQn($qnId): bool
+    {
+        $this->db->where('questionnaire_id', $qnId);
+        $this->db->delete('answers');
+        $this->db->where('questionnaire_id', $qnId);
+        $this->db->delete('questions');
+        $this->db->where('questionnaire_id', $qnId);
+        $this->db->delete('questionnaires');
+        return true;
     }
 
 }

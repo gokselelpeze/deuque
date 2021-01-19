@@ -124,6 +124,13 @@ class questionnaires extends CI_Controller{
         }
         return $randomString;
     }
+    function delete($param =''){
+        $this->load->model('questionnaires_model');
+        $delete = $this->questionnaires_model->deleteQn($param);
+        if ($delete){
+            redirect('admin');
+        }
+    }
 
     public function publish($param = ''){
         $this->load->model('questionnaires_model');

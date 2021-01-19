@@ -11,7 +11,7 @@ $popularQuestionnaires = json_decode(json_encode($popularQns), true);
     <div class="container mt-5  text-center">
         <div class="card-deck">
             <div class="card">
-                <a href="questionnaire/blank">
+                <a id="blankQn" href="questionnaire/blank">
                     <img class="card-img-top"
                          src="https://ssl.gstatic.com/docs/templates/thumbnails/forms-blank-googlecolors.png"
                          alt="Card image cap">
@@ -112,7 +112,14 @@ $popularQuestionnaires = json_decode(json_encode($popularQns), true);
 </div>
 <div>
 
-
+<script>
+    var logged = "<?php echo $this->session->userdata('currently_logged_in')?>";
+    if (!logged){
+        // Login Control when create qn
+        var link = document.getElementById('blankQn');
+        link.setAttribute("href", "login");
+    }
+</script>
 </div>
 
 <?php include dirname(__DIR__, 1) . '/sections/footer.php';?>
