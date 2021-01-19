@@ -17,8 +17,8 @@
             <div class="row">
                 <div class="col-md-12 mt-5">
                     <div class="error-template">
-                        <h1>
-                            Oops!</h1>
+                        <img src="<?php echo base_url()?>assets/img/oops.png" class="mx-auto d-block m-5" width="20%">
+
                         <h2>
                             404 Not Found</h2>
                         <div class="error-details">
