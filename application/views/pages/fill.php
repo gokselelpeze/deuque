@@ -20,7 +20,7 @@ $userInfo = json_decode(json_encode($user), true);
         </div>
     </nav>
 <div class="container py-5">
-    <h1 class="text-center"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
+    <h1 class="text-center text-white"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
     <h2 class="text-secondary text-center"><?php echo $qnInfo[0]['questionnaire_subtext'] ?></h2>
 
     <div class="ml-5 ">
