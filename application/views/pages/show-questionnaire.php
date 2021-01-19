@@ -20,7 +20,7 @@ $userInfo = json_decode(json_encode($user), true);
         </div>
     </nav>
 <div class="container py-5">
-    <h1 class="text-center text-white"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
+    <h1 class="text-center"><?php echo $qnInfo[0]['questionnaire_name'] ?></h1>
     <h2 class="text-secondary text-center"><?php echo $qnInfo[0]['questionnaire_subtext'] ?></h2>
 
     <div class="ml-5 ">
@@ -45,7 +45,7 @@ $userInfo = json_decode(json_encode($user), true);
                 echo '</fieldset>';
                 echo '</div>';
             } ?>
-            <button type="submit" class="btn btn-primary col-4 m-3" id="fillForm">Send Answers</button>
+            <p>You Already filled this questionnaire.</p>
         </form>
     </div>
     <h5 class="float-right"><strong>Creator:</strong> <a href="<?php echo base_url().'profile/'.$userInfo[0]['user_id'] ?>"><?php echo $userInfo[0]['user_name'] ?></a></h5>

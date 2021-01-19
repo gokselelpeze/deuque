@@ -156,6 +156,14 @@ class questionnaires_model extends CI_Model
         return $answers->result();
     }
 
+    public function getUserAnswers($qnId,$uId){
+        $this->db->where('questionnaire_id', $qnId);
+        $this->db->where('user_id', $uId);
+        $this->db->select('user_id');
+        $answers = $this->db->get('answers');
+        return $answers->result();
+    }
+
     public function updateQnStatus($qnId){
         $this->db->set('publish_status', 1, FALSE);
         $this->db->where('questionnaire_id',$qnId);
