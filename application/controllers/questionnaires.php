@@ -11,6 +11,7 @@ class questionnaires extends CI_Controller{
     }
 
     public function fill($param=''){
+        $userNow = $this->session->userdata('user_id');
         $this->load->model("questionnaires_model");
         $data['qn'] = $this->questionnaires_model->getQn($param);
         if($data['qn'] == null){
@@ -19,8 +20,27 @@ class questionnaires extends CI_Controller{
         $data['questions'] = $this->questionnaires_model->getQuestions($param);
         $qnInfo = json_decode(json_encode($data['qn']), true);
         $userID = $qnInfo[0]['user_id'];
+        $qnId = $qnInfo[0]['questionnaire_id'];
         $data['user'] = $this->questionnaires_model->getUserById($userID);
-        $this->load->view("pages/fill.php",$data);
+        $answers = $this->questionnaires_model->getUserAnswers($qnId,$userID);
+        $ansArr = json_decode(json_encode($answers), true);
+        if($answers == !null){
+            if($qnInfo[0]['user_id'] == $userNow)
+            {
+                if($userNow == $ansArr[0]['user_id'])
+                    $this->load->view("pages/show-questionnaire.php",$data);
+                else
+                    $this->load->view("pages/fill.php",$data);
+            }
+            else{
+                if($userNow == $ansArr[0]['user_id'])
+                    $this->load->view("sections/already-filled.php",$data);
+                else
+                    $this->load->view("pages/fill.php",$data);
+            }
+        }
+        else
+            $this->load->view("pages/fill.php",$data);
     }
     public function responses($param=''){
         // get responses
@@ -37,6 +57,10 @@ class questionnaires extends CI_Controller{
         $i = 0;
         foreach ($questions as $qs){
             $answers = $this->questionnaires_model->getAnswers($qnInfo[0]['questionnaire_id'],$qs['question_id']);
+            if($answers == null){
+                $data['answerInfo'] = null;
+                break;
+            }
             $ansInfo = json_decode(json_encode($answers), true);
             /*var_dump($ansInfo);*/
             $j = 0;

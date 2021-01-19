@@ -17,6 +17,7 @@ h1{
 }
 body{
     background: #3A6073;
+    color: #c8d3de;
 }
 text{
     color: var(--secondary);

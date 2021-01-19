@@ -1,8 +1,15 @@
 <?php
-if ($this->session->userdata('currently_logged_in'))
+if ($this->session->userdata('currently_logged_in')) {
     include dirname(__DIR__, 1) . '/sections/header-user.php';
-else
+    $ses = '';
+}
+else {
     include dirname(__DIR__, 1) . '/sections/header.php';
+    $ses = ' <form action="signup" method="post" class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" name="emailSign" type="text" placeholder="Email Address">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up Now</button>
+                </form>';
+}
 ?>
 <!--        <div class="jumbotron text-center justify-content-center">-->
 <!--            <h1>Create and Share Your Questions</h1>-->
@@ -18,11 +25,7 @@ else
                     their questionnaires on DeuQue before making a decision. <br>
                     The world's largest and most advanced questionnaire platform
                 </p>
-<!--                BURADA EMAILI ALIP SIGN UP A GIDICEK EMAIL FILLENCEK OTO-->
-                <form action="signup" method="post" class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" name="emailSign" type="text" placeholder="Email Address">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up Now</button>
-                </form>
+               <?php echo $ses?>
             </div>
             <div class="col">
                 <img src="<?php echo base_url() ?>assets/img/deuque.png">
