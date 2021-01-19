@@ -91,7 +91,7 @@ var_dump($answerInfo);
                         options: {
                             title: {
                                 display: true,
-                                text: "<?php echo 'Q)'.$count .$question['questionName']?>"
+                                text: "<?php echo 'Q'.$count .') '.$question['questionName']?>"
                             }
                         }
                     });
