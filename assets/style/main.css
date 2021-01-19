@@ -1,0 +1,26 @@
+:root{
+    --primary:   #252D36;
+    --secondary: #7D99B5;
+    --primarytext: #252D36;
+    --blue: #1976D2;
+    --red: #FF0000;
+    --color-1: #1976D2;
+    --buttonTint: #0A3C5C;
+    --listColor:  #1e2633;
+}
+* {
+    font-family: sans-serif;
+}
+h1{
+    color: var(--primary);
+
+}
+body{
+    background: #3A6073;
+}
+text{
+    color: var(--secondary);
+    font-size: 16pt;
+    text-align: center;
+
+}
