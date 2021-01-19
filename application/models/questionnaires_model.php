@@ -106,6 +106,7 @@ class questionnaires_model extends CI_Model
                 $this->db->insert('answers', $data);
             }
         }
+        $this->db->query('CALL IncreaseParticipantCountByOne(\''.($answers['qnId'].'\')'));
         return true;
     }
     public function insertQuestion(){
@@ -123,6 +124,10 @@ class questionnaires_model extends CI_Model
             'option_8' => $this->input->post('option8'),
         );
         return $this->db->insert('questions', $data);
+    }
+
+    public function increaseParticipantCount($qnId){
+
     }
 
 }

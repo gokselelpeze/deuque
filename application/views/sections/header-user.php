@@ -24,6 +24,12 @@
             </div>
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
+                    <li>
+                        <form action="search" method="post" class="form-inline mt-2 mt-md-0">
+                            <input class="form-control mr-sm-2" name="searched" type="text" placeholder="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?php echo base_url(); ?>questionnaires">Questionnaires</a>
                     </li>
@@ -37,12 +43,6 @@
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
-                    <li>
-                        <form action="search" method="post" class="form-inline mt-2 mt-md-0">
-                            <input class="form-control mr-sm-2" name="searched" type="text" placeholder="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url();?>profile/<?php echo $this->session->userdata('user_id') ?>">Profile</a>
                     </li>

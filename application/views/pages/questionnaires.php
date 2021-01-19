@@ -3,7 +3,8 @@ if ($this->session->userdata('currently_logged_in'))
     include dirname(__DIR__, 1) . '/sections/header-user.php';
 else
     include dirname(__DIR__, 1) . '/sections/header.php';
-$questionnaires = json_decode(json_encode($recentQns), true);
+$recentQuestionnaires = json_decode(json_encode($recentQns), true);
+$popularQuestionnaires = json_decode(json_encode($popularQns), true);
 ?>
 <div class="jumbotron">
     <h3 class="mt-2">Start a new Questionnaire</h3>
@@ -51,7 +52,7 @@ $questionnaires = json_decode(json_encode($recentQns), true);
         <?php
 
         echo '<h6 class="border-bottom border-gray pb-2 mb-0">Recently Created Questionnaires</h6>';
-        foreach ($questionnaires as $row)
+        foreach ($recentQuestionnaires as $row)
         {
             $rand = str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT);
 
@@ -82,7 +83,7 @@ $questionnaires = json_decode(json_encode($recentQns), true);
         <?php
 
         echo '<h6 class="border-bottom border-gray pb-2 mb-0">Popular Questionnaires</h6>';
-        foreach ($questionnaires as $row)
+        foreach ($popularQuestionnaires as $row)
         {
             $rand = str_pad(dechex(rand(0x000000, 0xFFFFFF)), 6, 0, STR_PAD_LEFT);
 
