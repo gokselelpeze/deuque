@@ -52,7 +52,8 @@ class login extends CI_Controller {
             $data = array(
                 'username' => $this->input->post('username'),
                 'currently_logged_in' => 1,
-                'user_id' => $userInfo[0]->user_id
+                'user_id' => $userInfo[0]->user_id,
+                'user_type' => $userInfo[0]->user_type
             );
             $this->session->set_userdata($data);
            redirect('login/data');

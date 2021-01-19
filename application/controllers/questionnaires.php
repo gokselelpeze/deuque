@@ -125,5 +125,51 @@ class questionnaires extends CI_Controller{
         return $randomString;
     }
 
+    public function publish($param = ''){
+        $this->load->model('questionnaires_model');
+        $this->questionnaires_model->updateQnStatus($param);
+        $data['qnId'] = $param;
+        $this->load->view('sections/published.php',$data);
+    }
+
+    public function edit($param = ''){
+        $this->load->model('questionnaires_model');
+        $data['qn'] = $this->questionnaires_model->getQn($param);
+        $qnInfo = json_decode(json_encode($data), true);
+        $data['questions'] = $this->questionnaires_model->getQuestions($param);
+        if ($data['qn'] == null)
+            redirect('oops');
+        if($this->session->userdata('user_id') == $qnInfo['qn'][0]['user_id']) {
+            if ($qnInfo['qn'][0]['publish_status'])
+                $this->load->view('sections/no-edit.php');
+            else
+                $this->load->view('sections/edit.php', $data);
+        }
+        else
+            redirect('oops');
+    }
+
+    public function updateQuestion(){
+        $questionInfo = array(
+            'question_id' => $this->input->post('questionId'),
+            'questionnaire_id' => $this->input->post('qnId'),
+            'question_name' => $this->input->post('questionName'),
+            'question_subtext' => $this->input->post('questionDescription'),
+            'option_1' => $this->input->post('option1'),
+            'option_2' => $this->input->post('option2'),
+            'option_3' => $this->input->post('option3'),
+            'option_4' => $this->input->post('option4'),
+            'option_5' => $this->input->post('option5'),
+            'option_6' => $this->input->post('option6'),
+            'option_7' => $this->input->post('option7'),
+            'option_8' => $this->input->post('option8'),
+        );
+        $this->load->model('questionnaires_model');
+        $this->questionnaires_model->updateQuestion($questionInfo);
+        redirect('edit/'.$questionInfo['questionnaire_id']);
+
+
+    }
+
 
 }

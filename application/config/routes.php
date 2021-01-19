@@ -70,6 +70,9 @@ $route['fill/(:any)'] = 'questionnaires/fill/$1';
 $route['responses/(:any)'] = 'questionnaires/responses/$1';
 $route['search'] = 'main/search/$1';
 $route['send-answers'] = 'questionnaires/sendAnswers';
+$route['update-question'] = 'questionnaires/updateQuestion';
+$route['publish/(:any)'] = 'questionnaires/publish/$1';
+$route['edit/(:any)'] = 'questionnaires/edit/$1';
 
 
 
