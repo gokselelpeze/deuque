@@ -26,7 +26,7 @@
             <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                 <ul class="navbar-nav mr-auto">
                     <li>
-                        <form action="search" method="post" class="form-inline mt-2 mt-md-0">
+                        <form id="search" action="search" method="post" class="form-inline mt-2 mt-md-0">
                             <input class="form-control mr-sm-2" name="searched" type="text" placeholder="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
@@ -45,6 +45,10 @@
             </div>
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" id="history">
+                        <a  class="nav-link" href="<?php echo base_url(); ?>history">History</a>
+                    </li>
+                    <li class="nav-item">
                     <li class="nav-item" id="admin">
                         <a  class="nav-link" href="<?php echo base_url(); ?>admin">Admin Panel</a>
                     </li>
@@ -60,8 +64,14 @@
         <script>
             var sessionValue= "<?php echo $this->session->userdata('user_type')?>";
             console.log(sessionValue);
-            if (!sessionValue){
+            if (sessionValue == 0){
                 //Hiding Admin Panel
                 document.getElementById('admin').style.display = 'none';
+                document.getElementById('history').style.display = 'none';
+                document.getElementById('search').setAttribute('action','search')
+            }
+            else{
+                document.getElementById('search').setAttribute('action','admin')
+
             }
         </script>

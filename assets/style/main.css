@@ -10,13 +10,15 @@
 }
 * {
     font-family: sans-serif;
+
 }
 h1{
     color: var(--primary);
 
 }
 body{
-    background: #3A6073;
+    color: var(--secondary);
+    background: var(--secondary);
 }
 text{
     color: var(--secondary);
@@ -24,3 +26,8 @@ text{
     text-align: center;
 
 }
+h2{
+    color: black;
+    font-size: 16pt;
+}
+

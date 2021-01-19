@@ -37,6 +37,11 @@ class questionnaires_model extends CI_Model
 
         return $query->result();
     }
+    public function getDeletedQns()
+    {
+        $query = $this->db->get('questionnaires_archive');
+        return $query->result();
+    }
 
     public function getQnsCount($userId)
     {

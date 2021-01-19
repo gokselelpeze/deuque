@@ -22,15 +22,11 @@ $qnsCount = json_decode(json_encode($count), true);
                     <dd class="text-info"><?php echo $userInfo[0]['user_name']?>
                     <dd class="profile-rank"><strong>Type: </strong><?php echo $userInfo[0]['user_type'] ? 'Admin' : 'Member';?>
                     <dd class="questionnaire-count"><strong>Questionnaires:</strong> <?php echo $qnsCount[0]['COUNT(*)']; ?>
-                    <dd class="profile-joined"><strong>Joined:</strong> Wed Jul 19, 2017 1:36 am
+                    <dd class="profile-joined"><strong>Joined:</strong> <?php echo $userInfo[0]['user_joinDate']?>
                 </div>
             </div>
         </div>
         <div class="col-8">
-            <div class="form-group has-search">
-                <span class="fa fa-search form-control-feedback"></span>
-                <input type="text" class="form-control" placeholder="Search">
-            </div>
             <label for=""></label> <strong>QUESTIONNAIRES</strong>
             <ul class=" list-group p-2">
                 <?php

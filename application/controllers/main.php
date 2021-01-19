@@ -38,10 +38,9 @@ class main extends CI_Controller
             $this->load->view("pages/oops.php");
     }
 
-    public function search($param = '')
+    public function search()
     {
         $searched = $this->input->post("searched");
-        $param = $searched;
         $this->load->model("questionnaires_model");
         $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
         $data['searchedUsers'] = $this->questionnaires_model->getSearchedUsers($searched);
@@ -79,7 +78,7 @@ class main extends CI_Controller
     public function admin()
     {
         if($this->session->userdata('user_type') == 1){
-            $searched = "";
+            $searched = $this->input->post("searched");
             $this->load->model("questionnaires_model");
             $data['searchedQns'] = $this->questionnaires_model->getSearchedQns($searched);
             $data['searchedUsers'] = $this->questionnaires_model->getSearchedUsers($searched);
@@ -89,6 +88,18 @@ class main extends CI_Controller
             $this->load->view("pages/oops.php");
         }
     }
+    public function history()
+    {
+        if($this->session->userdata('user_type') == 1){
+            $this->load->model("questionnaires_model");
+            $data['deletedQns'] = $this->questionnaires_model->getDeletedQns();
+            $this->load->view("pages/history.php",$data);
+        }
+        else{
+            $this->load->view("pages/oops.php");
+        }
+    }
+
 
 
 }

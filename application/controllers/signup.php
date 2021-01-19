@@ -32,4 +32,12 @@ class signup extends CI_Controller{
             $this->load->view('pages/index');
         }
     }
+    // Yazildi fakat test edilecek vakit kalmadi
+    /*    function deleteUser($param =''){
+            $this->load->model('signup_model');
+            $deleteUser = $this->signup_model->deleteUser($param);
+            if ($deleteUser){
+                redirect('admin');
+            }
+        }*/
 }
