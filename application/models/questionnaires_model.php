@@ -112,6 +112,7 @@ class questionnaires_model extends CI_Model
     }
     public function insertQuestion(){
         $data = array(
+            'question_id' => $this->input->post('questionId'),
             'questionnaire_id' => $this->input->post('qnId'),
             'question_name' => $this->input->post('questionName'),
             'question_subtext' => $this->input->post('questionDescription'),
@@ -126,7 +127,22 @@ class questionnaires_model extends CI_Model
         );
         return $this->db->insert('questions', $data);
     }
+    public function updateQuestion($data){
 
+        $this->db->set('question_name', $data['question_name']);
+        $this->db->set('question_subtext', $data['question_subtext']);
+        $this->db->set('option_1', $data['option_1']);
+        $this->db->set('option_2', $data['option_2']);
+        $this->db->set('option_3', $data['option_3']);
+        $this->db->set('option_4', $data['option_4']);
+        $this->db->set('option_5', $data['option_5']);
+        $this->db->set('option_6', $data['option_6']);
+        $this->db->set('option_7', $data['option_7']);
+        $this->db->set('option_8', $data['option_8']);
+        $this->db->where('question_id',  $data['question_id']);
+        $this->db->where('questionnaire_id',  $data['questionnaire_id']);
+        $this->db->update('questions');
+    }
     public function getAnswers($qnId,$questionId){
         $this->db->where('questionnaire_id', $qnId);
         $this->db->where('question_id', $questionId);
@@ -135,8 +151,10 @@ class questionnaires_model extends CI_Model
         return $answers->result();
     }
 
-    public function increaseParticipantCount($qnId){
-
+    public function updateQnStatus($qnId){
+        $this->db->set('publish_status', 1, FALSE);
+        $this->db->where('questionnaire_id',$qnId);
+        $this->db->update('questionnaires');
     }
     public function deleteQn($qnId): bool
     {

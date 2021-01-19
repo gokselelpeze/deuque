@@ -36,10 +36,18 @@ $qnsCount = json_decode(json_encode($count), true);
                 <?php
                 foreach ($questionnaires as $row)
                 {
+                    if($row['publish_status']){
+                        $qnStatus['color'] = 'btn-secondary';
+                        $qnStatus['state'] = 'disabled';
+                    }
+                    else{
+                        $qnStatus['color'] = 'btn-primary';
+                        $qnStatus['state'] = '';
+                    }
                     echo '<li class="d-flex justify-content-between list-group-item"><a href="' .base_url(). 'fill/' .$row['questionnaire_id']. '">' . $row['questionnaire_name'] . '</a>
     <div>
-        <button class="btn-secondary" disabled>Edit <i class="fa fa-pencil"></i></button>
-        <button class="btn-primary">Publish <i class="fa fa-toggle-on"></i></button>
+        <a href ="'.base_url().'edit/'.$row['questionnaire_id'].'"><button class="'.$qnStatus['color'].'" '.$qnStatus['state'].'>Edit <i class="fa fa-pencil"></i></button></a>
+        <a href="'.base_url().'publish/'.$row['questionnaire_id'].'"><button class="'.$qnStatus['color'].'" '.$qnStatus['state'].'>Publish <i class="fa fa-toggle-on"></i></button></a>
         <input type="text" value="'.base_url().'fill/'.$row['questionnaire_id'].'" id="myInput">
 
 
